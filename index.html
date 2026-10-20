@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Planner | Lab 4</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p>CCT360 · Lab 4 · Version 1</p>
+      <h1>Study Planner</h1>
+      <p>Choose your time and energy level to find your next step.</p>
+    </header>
+
+    <form id="planner-form">
+      <label for="minutes">How many minutes do you have?</label>
+      <input id="minutes" type="number" min="1" max="180" step="1" value="30" required>
+      <p class="hint">Enter a whole number from 1 to 180.</p>
+      <label class="checkbox-label" for="tired">
+        <input id="tired" type="checkbox"> I feel tired today
+      </label>
+      <button type="submit">Find my plan</button>
+    </form>
+
+    <section id="result" class="result ready" aria-live="polite" aria-atomic="true">
+      <h2 id="result-title">Ready to plan</h2>
+      <p id="result-text">Enter your available time, then find your plan.</p>
+    </section>
+
+    <button id="complete-button" type="button" disabled>Mark activity complete</button>
+    <p id="progress" role="status">Activities completed: 0</p>
+    <button id="reset-button" class="secondary" type="button">Reset</button>
+    <p class="hint">Progress lasts until you reset or reload this page.</p>
+    <noscript>Please enable JavaScript to use the planner.</noscript>
+  </main>
+</body>
+</html>
