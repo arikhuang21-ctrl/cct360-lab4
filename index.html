@@ -10,15 +10,15 @@
 <body>
   <main>
     <header>
-      <p>CCT360 · Lab 4 · Version 1</p>
+      <p>CCT360 · Lab 4</p>
       <h1>Study Planner</h1>
       <p>Choose your time and energy level to find your next step.</p>
     </header>
 
     <form id="planner-form">
       <label for="minutes">How many minutes do you have?</label>
-      <input id="minutes" type="number" min="1" max="180" step="1" value="30" required>
-      <p class="hint">Enter a whole number from 1 to 180.</p>
+      <input aria-describedby="minutes-help" id="minutes" type="number" min="1" max="180" step="1" value="30" required>
+      <p id="minutes-help" class="hint">Enter a whole number from 1 to 180.</p>
       <label class="checkbox-label" for="tired">
         <input id="tired" type="checkbox"> I feel tired today
       </label>
@@ -33,6 +33,14 @@
     <button id="complete-button" type="button" disabled>Mark activity complete</button>
     <p id="progress" role="status">Activities completed: 0</p>
     <button id="reset-button" class="secondary" type="button">Reset</button>
+    <details>
+      <summary>How is my plan chosen?</summary>
+      <ul>
+        <li>Feeling tired or under 10 minutes: take a break.</li>
+        <li>10–29 minutes and not tired: review your notes.</li>
+        <li>30 minutes or more and not tired: try a focus session.</li>
+      </ul>
+    </details>
     <p class="hint">Progress lasts until you reset or reload this page.</p>
     <noscript>Please enable JavaScript to use the planner.</noscript>
   </main>
